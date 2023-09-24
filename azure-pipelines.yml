@@ -28,6 +28,7 @@ steps:
     goals: 'clean install'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    allowBrokenSymlinks: false
     codeCoverageToolOption: 'JaCoCo'
     codeCoverageFailIfEmpty: true
     javaHomeOption: 'JDKVersion'
@@ -37,7 +38,7 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: true
     isJacocoCoverageReportXML: true
-    sqMavenPluginVersionChoice: 'latest'
+    sqMavenPluginVersionChoice: 'pom'
 
 
 - task: SonarQubePublish@5
