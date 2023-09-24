@@ -11,7 +11,7 @@
   <properties>
     <sonar.host.url>http://13.49.73.180:9000/</sonar.host.url>
     <sonar.login>admin</sonar.login>
-    <sonar.password>Devops@2448</sonar.password>
+    <sonar.password>admin</sonar.password>
 <!--
     <sonar.language>java</sonar.language>
     <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
@@ -47,7 +47,7 @@
       <plugin>
           <groupId>org.sonarsource.scanner.maven</groupId>
           <artifactId>sonar-maven-plugin</artifactId>
-          <version>3.9.1</version>
+          <version>3.10.0</version>
         </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
