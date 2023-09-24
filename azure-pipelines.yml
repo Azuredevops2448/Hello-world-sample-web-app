@@ -22,6 +22,7 @@ steps:
             sonar.sourceEncoding=UTF-8
             sonar.jacoco.reportPaths=/home/vsts/work/1/s/**/jacoco.xml
 
+
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
@@ -35,9 +36,7 @@ steps:
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: true
     effectivePomSkip: true
-    sonarQubeRunAnalysis: true
-    isJacocoCoverageReportXML: true
-    sqMavenPluginVersionChoice: 'latest'
+    sonarQubeRunAnalysis: false
 
 
 - task: SonarQubePublish@5
