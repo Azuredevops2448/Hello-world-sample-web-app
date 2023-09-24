@@ -20,6 +20,7 @@ steps:
             sonar.sources=src/main/java/
             sonar.language=java
             sonar.sourceEncoding=UTF-8
+            sonar.jacoco.reportPaths=/home/vsts/work/1/s/**/jacoco.xml
 
 
 - task: Maven@3
