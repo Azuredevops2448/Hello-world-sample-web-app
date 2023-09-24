@@ -16,10 +16,12 @@
     <sonar.language>java</sonar.language>
     <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
     <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
--->
+
 
     <sonar.coverage.jacoco.xmlReportPaths>/root/pipelines-java/target/my-reports/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     <sonar.jacoco.reportPath>/root/pipelines-java/target/jacoco.exec</sonar.jacoco.reportPath>
+
+-->
 <!--	
     <sonar.tests>/root/pipelines-java/src/test/java</sonar.tests>
 -->
