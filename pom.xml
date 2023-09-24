@@ -19,7 +19,7 @@
     <sonar.coverage.jacoco.xmlReportPaths>/root/pipelines-java/target/my-reports/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     <sonar.jacoco.reportPath>/root/pipelines-java/target/jacoco.exec</sonar.jacoco.reportPath>
 		
-    <sonar.tests>/root/pipelines-java/src/test/java/com/mt/sample/test</sonar.tests>
+    <sonar.tests>/root/pipelines-java/src/test/java</sonar.tests>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
