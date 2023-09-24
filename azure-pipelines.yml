@@ -27,6 +27,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/target/*.war'
+    PathtoPublish: '/home/vsts/work/1/s/target/*.war'
     ArtifactName: 'drop'
     publishLocation: 'Container'
