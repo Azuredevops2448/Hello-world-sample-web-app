@@ -12,9 +12,11 @@
     <sonar.host.url>http://13.49.73.180:9000/</sonar.host.url>
     <sonar.login>admin</sonar.login>
     <sonar.password>Devops@2448</sonar.password>
+<!--
     <sonar.language>java</sonar.language>
     <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
     <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+-->
 
     <sonar.coverage.jacoco.xmlReportPaths>/root/pipelines-java/target/my-reports/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     <sonar.jacoco.reportPath>/root/pipelines-java/target/jacoco.exec</sonar.jacoco.reportPath>
