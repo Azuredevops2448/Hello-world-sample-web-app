@@ -26,7 +26,7 @@ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
-    goals: 'install'
+    goals: 'install sonar:sonar'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     testRunTitle: 'running test cases'
@@ -39,7 +39,8 @@ steps:
     mavenOptions: '-Xmx3072m'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
-    sonarQubeRunAnalysis: false
+    sonarQubeRunAnalysis: true
+    sqMavenPluginVersionChoice: 'latest'
 - task: SonarQubeAnalyze@5
   inputs:
     jdkversion: 'JAVA_HOME_11_X64'
