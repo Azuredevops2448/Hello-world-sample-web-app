@@ -10,6 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: 'Sonar-aws'
+    scannerMode: 'Other'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -23,8 +27,16 @@ steps:
     mavenOptions: '-Xmx3072m'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
-    sonarQubeRunAnalysis: false
+    sonarQubeRunAnalysis: true
+    isJacocoCoverageReportXML: true
+    sqMavenPluginVersionChoice: 'latest'
 
+- task: SonarQubeAnalyze@5
+  inputs:
+    jdkversion: 'JAVA_HOME_11_X64'
+- task: SonarQubePublish@5
+  inputs:
+    pollingTimeoutSec: '300'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '/home/vsts/work/1/s/target/helloworld.war'
