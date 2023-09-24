@@ -32,11 +32,16 @@ steps:
     codeCoverageToolOption: 'JaCoCo'
     codeCoverageFailIfEmpty: true
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
+    jdkVersionOption: '1.11'
     mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: true
-    effectivePomSkip: true
-    sonarQubeRunAnalysis: false
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: true
+    isJacocoCoverageReportXML: true
+    sqMavenPluginVersionChoice: 'latest'
+    checkStyleRunAnalysis: true
+    pmdRunAnalysis: true
+    findBugsRunAnalysis: true
 
 
 - task: SonarQubePublish@5
