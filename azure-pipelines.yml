@@ -18,8 +18,8 @@ steps:
     codeCoverageToolOption: 'JaCoCo'
     codeCoverageFailIfEmpty: true
     codeCoverageRestoreOriginalPomXml: true
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
+    javaHomeOption: 'Path'
+    jdkDirectory: '/usr/lib/jvm/java-11-openjdk-11.0.20.0.8-3.el9.x86_64'
     mavenVersionOption: 'Path'
     mavenDirectory: '/opt/apache-maven-3.9.4/'
     mavenSetM2Home: false
