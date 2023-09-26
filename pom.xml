@@ -9,27 +9,11 @@
   <url>http://maven.apache.org</url>
 
   <properties>
-    <sonar.host.url>http://13.49.73.180:9000/</sonar.host.url>
-    <sonar.login>admin</sonar.login>
-    <sonar.password>Devops@2448</sonar.password>
-<!--
-    <sonar.language>java</sonar.language>
-    <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
-    <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-
-
-    <sonar.coverage.jacoco.xmlReportPaths>/root/pipelines-java/target/my-reports/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
-    <sonar.jacoco.reportPath>/root/pipelines-java/target/jacoco.exec</sonar.jacoco.reportPath>
-
--->
-<!--	
-    <sonar.tests>/root/pipelines-java/src/test/java</sonar.tests>
--->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
-    <maven.compiler.source>1.8</maven.compiler.source>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <sonar.coverage.jacoco.xmlReportPaths>${maven.multiModuleProjectDirectory}/tests/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
   </properties>
 
   <dependencies>
@@ -39,49 +23,27 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
-   <dependency>
-    <groupId>org.codehaus.mojo</groupId>
-    <artifactId>sonar-maven-plugin</artifactId>
-    <version>3.10.0.2594</version>
-    <type>pom</type>
-  </dependency>
-  <dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-war-plugin</artifactId>
-    <version>3.4.0</version>
-  </dependency>
- 
-   
   </dependencies>
 
   <build>
     <finalName>helloworld</finalName>
     <plugins>
       <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.1</version>
+        </plugin>
+      <plugin>
           <groupId>org.sonarsource.scanner.maven</groupId>
           <artifactId>sonar-maven-plugin</artifactId>
           <version>3.9.1</version>
         </plugin>
       <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.8.2</version>
-        <executions>
-          <execution>
-            <id>prepare-agent</id>
-            <goals>
-              <goal>prepare-agent</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>report</id>
-            <phase>test</phase>
-            <goals>
-              <goal>report</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>0.8.6</version>
+        </plugin>
+      </plugins>
     </plugins>
   </build>
 
